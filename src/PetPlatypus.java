@@ -2,7 +2,7 @@ public class PetPlatypus {
 	private String name;
 	
 	PetPlatypus(String name){
-		name = this.name;
+		this.name = name;
 	}
 	
 	void sayHi(){
