@@ -42,6 +42,7 @@ public class Jeopardy implements ActionListener {
 	}
 
 	private void start() {
+		playJeopardyTheme();
 		JFrame frame = new JFrame();
 		quizPanel = new JPanel();
 		frame.setLayout(new BorderLayout());
@@ -67,7 +68,7 @@ public class Jeopardy implements ActionListener {
 
 		// 9. Use the secondButton variable to hold a button using the
 		// createButton method
-		secondButton = createButton("100");
+		secondButton = createButton("200");
 		// 10. Add the secondButton to the quizPanel
 		quizPanel.add(secondButton);
 		// 11. Add action listeners to the buttons (2 lines of code)
@@ -108,11 +109,12 @@ public class Jeopardy implements ActionListener {
 		// Remove this temporary message:
 
 		// Use the method that plays the jeopardy theme music.
-		playJeopardyTheme();
 		JButton buttonPressed = (JButton) arg0.getSource();
 		// If the buttonPressed was the firstButton
-		if (buttonPressed == firstButton) {
+		
+		if(firstButton.getText().equals("100") && buttonPressed == firstButton){
 			askQuestion("Name the three primary colors (from warm to cold; no capitals).", "red, yellow, blue", 100);
+			firstButton.setText("");
 		}
 		// Call the askQuestion() method
 
@@ -122,13 +124,15 @@ public class Jeopardy implements ActionListener {
 		// Or if the buttonPressed was the secondButton
 		if (buttonPressed == secondButton) {
 			askQuestion("Name the three secondary colors (from warm to cold; no capitals).", "orange, green, purple",
-					300);
+					1000000);
+			secondButton.setText("");
+			
+		
 		}
 
 		// Call the askQuestionRecipe with a harder question
-		
-		// Clear the button text (set the button text to nothing)
 
+		// Clear the button text (set the button text to nothing)
 	}
 
 	private void askQuestion(String question, String correctAnswer, int prizeMoney) {
