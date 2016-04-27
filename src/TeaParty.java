@@ -14,8 +14,10 @@ public class TeaParty {
 			title = "Sir ";
 		}
 		else{
-			title = "Mr. "
+			title = "Mr. ";
 		}
-		return "Hello, " + title + "hi";
+		
+		
+		return "Hello " + title + name;
 	}
 }
