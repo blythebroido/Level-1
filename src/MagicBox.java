@@ -5,33 +5,34 @@ import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
+import javax.print.DocFlavor.URL;
+import javax.swing.Icon;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 public class MagicBox extends JPanel implements Runnable {
 
 	/*
-	 * Work together as a TEAM of 2 or 3 to make this project. We are going to hide secrets within the magic box. 
-	 * When the user clicks on a secret place, stuff will happen.
+	 * Work together as a TEAM of 2 or 3 to make this project. We are going to
+	 * hide secrets within the magic box. When the user clicks on a secret
+	 * place, stuff will happen.
 	 * 
 	 * 1. Make the frame respond to mouse clicks.
 	 * 
-	 * 2. When the mouse is clicked, use the Media Palace (bit.ly/media-palace) to play sounds, show images or speak.
+	 * 2. When the mouse is clicked, use the Media Palace (bit.ly/media-palace)
+	 * to play sounds, show images or speak.
 	 * 
-	 * 3. backgroundImage.getRGB(keyEvent.getX(), keyEvent.getY()) will give you the color of the current pixel.
+	 * 3. backgroundImage.getRGB(keyEvent.getX(), keyEvent.getY()) will give you
+	 * the color of the current pixel.
 	 */
 
 	BufferedImage backgroundImage;
 
 	public static void main(String[] args) throws Exception {
 		SwingUtilities.invokeLater(new MagicBox());
-		if(__.equals(_)){
-			
-		}
-		else{
-			
-		}
+
 	}
 
 	@Override
@@ -42,6 +43,12 @@ public class MagicBox extends JPanel implements Runnable {
 		} catch (Exception w) {
 			System.err.println(w.getMessage());
 		}
+		//if (__==(_)) {
+		//	loadBackgroundImage();
+		//} else {
+	//nothing needed here  :)))))
+		//}
+		
 	}
 
 	private void createUI() {
@@ -66,10 +73,5 @@ public class MagicBox extends JPanel implements Runnable {
 	public void paintComponent(Graphics g) {
 		g.drawImage(backgroundImage, 0, 0, null);
 	}
-	public JLabel loadImageFromWithinProject(String fileName) {
-		URL imageURL = getClass().getResource(fileName);
-		Icon icon = new ImageIcon(imageURL);
-		return new JLabel(icon);
-	}
-}
 
+}
