@@ -43,12 +43,12 @@ public class MagicBox extends JPanel implements Runnable {
 		} catch (Exception w) {
 			System.err.println(w.getMessage());
 		}
-		//if (__==(_)) {
-		//	loadBackgroundImage();
+		MediaPalace media = new MediaPalace();
+		//if (__==-408729) {
+		//	media.loadImageFromWithinProject("jumping.jpg");
 		//} else {
-	//nothing needed here  :)))))
 		//}
-		
+
 	}
 
 	private void createUI() {
