@@ -81,7 +81,7 @@ if(getTimeElapsed() > 20){
 	Tortoise.hide();
 }
 		// 12. If the Tortoise crosses it's own path, tell them they failed and move them back to the beginning
-	if(wasHereBefore(tortoiseLocationX-1, tortoiseLocationY)){
+	if(wasHereBefore(Tortoise.getX(), Tortoise.getY())){
 		JOptionPane.showMessageDialog(null, "You failed.");
 		Tortoise.hide();
 	}
