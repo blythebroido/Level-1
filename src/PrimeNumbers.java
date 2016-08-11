@@ -26,7 +26,8 @@ public class PrimeNumbers implements ActionListener {
 		panel.add(label);
 		panel.add(textField);
 		frame.setSize(1000, 500);
-		button.setText("Type a number less than 100 into the text field and click here to find out if" + " it is prime!");
+		button.setText("Type a number less than 100 into the text field and click here to find out if" 
+		+ " it is prime!");
 		button.addActionListener(this);
 		
 	}
@@ -36,12 +37,13 @@ public class PrimeNumbers implements ActionListener {
 		// TODO Auto-generated method stub
 		String string = textField.getText();
 		int number = Integer.parseInt(string);
-		for (int i = 1; i < 101; i++) {
-			if (number % i == 1) {
+		for (int i = 1; i < number; i++) {
+			if (number % i == 0) {
 				label.setText("no");
 			} else {
 				label.setText("yes");
 			}
+			
 		}
 		frame.pack();
 	}
